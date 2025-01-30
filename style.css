@@ -152,14 +152,14 @@ a {
 }
 /************Produkt************/
 @media (min-width: 1024px) {
-  .grid_1-1 {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 2px solid #eeebeb;
-    margin: 5rem;
+    margin: 7rem;
   }
 }
-.grid_1-1 {
+.productContainer {
   border: 2px solid #eeebeb;
 }
 .information_container {
@@ -169,7 +169,7 @@ a {
   background-color: #eeebeb;
 }
 
-.grid_1-1 img {
+.productContainer img {
   max-width: 600px;
   align-items: center;
 }
@@ -186,11 +186,47 @@ a {
   color: grey;
 }
 .information {
-  grid-row: span 2;
+  grid-row: span 3;
   display: grid;
   grid-template-rows: subgrid;
   align-items: start;
 }
 h2 {
   padding-top: 12px;
+}
+
+.dropdown {
+  width: 220px;
+  position: relative;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  appearance: none; /* Fjerner standard dropdown-pil */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Tilføj en brugerdefineret pil */
+.dropdown::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #333;
+  pointer-events: none;
+}
+
+/* Hover-effekt */
+select:hover,
+select:focus {
+  border-color: black;
+  outline: none;
 }
